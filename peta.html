@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peta</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body data-page="peta">
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand__logo" src="assets/logo.png" alt="Logo JejakTapteng">
+      <div class="brand__text">
+        <div class="brand__title">JejakTapteng</div>
+        <div class="brand__sub">Beranda • Peta • Detail Informasi • Tentang</div>
+      </div>
+    </div>
+
+    <nav class="nav" id="mainNav">
+      <a class="nav__link" href="index.html" data-page="beranda">Beranda</a>
+      <a class="nav__link" href="peta.html" data-page="peta">Peta</a>
+      <a class="nav__link" href="detail-informasi.html" data-page="detail">Detail Informasi</a>
+      <a class="nav__link" href="tentang.html" data-page="tentang">Tentang</a>
+    </nav>
+  </header>
+
+  <main class="mapLayout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar__title">LAYER PETA</div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <div class="panel__title">Batas Administrasi</div>
+          <label class="switch" title="Tampilkan layer">
+            <input type="checkbox" id="layerAdmin" checked />
+            <span class="switch__track"></span>
+          </label>
+        </div>
+        <div class="panel__body">
+          <div class="muted small">Layer batas wilayah administrasi.</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <div class="panel__title">Periode Tutupan Lahan</div>
+        </div>
+        <div class="panel__body">
+          <label class="radio">
+            <input type="radio" name="periode" value="2020-2022" checked />
+            <span>Tahun 2020–2022</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="periode" value="2023-2024" />
+            <span>Tahun 2023–2024</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="periode" value="2025" />
+            <span>Tahun 2025</span>
+          </label>
+          <label class="radio">
+            <input type="radio" name="periode" value="Bencana Pulau Sumatera November 2025" />
+            <span>Bencana Pulau Sumatera November 2025</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel__head">
+          <div class="panel__title">Pemodelan Banjir</div>
+          <label class="switch" title="Tampilkan layer">
+            <input type="checkbox" id="layerFlood" />
+            <span class="switch__track"></span>
+          </label>
+        </div>
+        <div class="panel__body">
+          <div class="muted small">Contoh layer pemodelan banjir (placeholder).</div>
+        </div>
+      </div>
+
+      <div class="panel infoCard" id="infoCard">
+        <div class="panel__head">
+          <div class="panel__title" id="infoTitle">Tutupan Lahan 2020–2022</div>
+        </div>
+        <div class="panel__body">
+          <p class="muted" id="infoDesc">
+            Tutupan lahan didominasi vegetasi (73,75%) disusul sawit (17,28%). Aktivitas terbangun masih kecil (2,18%).
+          </p>
+          <div class="miniStats">
+            <div class="miniStat" data-key="air"><div class="miniStat__label">Badan Air</div><div class="miniStat__value">0%</div></div>
+            <div class="miniStat" data-key="infrastruktur"><div class="miniStat__label">Infrastruktur</div><div class="miniStat__value">0%</div></div>
+            <div class="miniStat" data-key="pertanian"><div class="miniStat__label">Pertanian</div><div class="miniStat__value">0%</div></div>
+            <div class="miniStat" data-key="vegetasi"><div class="miniStat__label">Vegetasi</div><div class="miniStat__value">0%</div></div>
+            <div class="miniStat" data-key="lahanTerbuka"><div class="miniStat__label">Lahan Terbuka</div><div class="miniStat__value">0%</div></div>
+            <div class="miniStat" data-key="sawit"><div class="miniStat__label">Sawit</div><div class="miniStat__value">0%</div></div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAP AREA (CUMA 1 KALI) -->
+    <section class="mapArea">
+      <div class="basemap">
+        <button class="basemap__btn is-active" data-basemap="OSM" type="button">OSM</button>
+        <button class="basemap__btn" data-basemap="Satelit" type="button">SATELIT</button>
+      </div>
+
+      <div class="mapCanvas" id="mapCanvas">
+        <div id="map"></div>
+
+        <div class="mapStatus">
+          <div class="mapStatus__big" id="mapStatusBasemap">Tampilan Peta Aktif: OSM</div>
+          <div class="mapStatus__small" id="mapStatusPeriode">Periode Data: 2020–2022</div>
+        </div>
+
+        <div class="layer layer--admin" id="layerAdminView">Batas Administrasi (ON)</div>
+        <div class="layer layer--flood hidden" id="layerFloodView">Pemodelan Banjir (ON)</div>
+      </div>
+
+      <div class="legendWrap">
+        <button class="legendToggle" type="button" id="legendToggle">LEGENDA ▾</button>
+        <div class="legend" id="legend">
+          <div class="legend__item"><span class="dot dot--air"></span> Air</div>
+          <div class="legend__item"><span class="dot dot--terbangun"></span> Infrastruktur</div>
+          <div class="legend__item"><span class="dot dot--pertanian"></span> Pertanian</div>
+          <div class="legend__item"><span class="dot dot--vegetasi"></span> Vegetasi</div>
+          <div class="legend__item"><span class="dot dot--tanah"></span> Lahan Terbuka</div>
+          <div class="legend__item"><span class="dot dot--sawit"></span> Sawit</div>
+        </div>
+      </div>
+
+      <button class="helpBtn" type="button" title="Bantuan">?</button>
+    </section>
+
+    
+  </main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/protomaps-leaflet/dist/protomaps-leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/proj4@2.9.0/dist/proj4.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/proj4leaflet@1.0.2/src/proj4leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda</title>
+
+  <!-- CSS UTAMA -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- LEAFLET CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+</head>
+
+<body data-page="beranda">
+  <!-- ================= HEADER ================= -->
+    <header class="topbar">
+      <div class="brand">
+        <img class="brand__logo" src="assets/logo.png" alt="Logo JejakTapteng">
+        <div class="brand__text">
+          <div class="brand__title">JejakTapteng</div>
+          <div class="brand__sub">Beranda • Peta • Detail Informasi • Tentang</div>
+        </div>
+      </div>
+
+      <nav class="nav" id="mainNav">
+        <a class="nav__link" href="index.html" data-page="beranda">Beranda</a>
+        <a class="nav__link" href="peta.html" data-page="peta">Peta</a>
+        <a class="nav__link" href="detail-informasi.html" data-page="detail">Detail Informasi</a>
+        <a class="nav__link" href="tentang.html" data-page="tentang">Tentang</a>
+      </nav>
+    </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="heroFull" id="heroFull">
+      <video class="heroFull__video" autoplay muted loop playsinline>
+        <source src="assets/Tapteng.mp4" type="video/mp4" />
+      </video>
+
+      <div class="heroFull__overlay"></div>
+
+      <div class="heroFull__content">
+        <h1>
+          Bencana Pulau<br />
+          Sumatera:<br />
+          Tapanuli<br />
+          Tengah
+        </h1>
+
+        <div class="heroFull__line"></div>
+        <p>Tentang TAPTENG • Tentang TapTeng</p>
+
+        <div class="heroFull__actions">
+          <a class="btnHero btnHero--primary" href="peta.html">Lihat Peta</a>
+          <a class="btnHero btnHero--ghost" href="detail-informasi.html">Detail Informasi</a>
+        </div>
+      </div>
+    </section>
+
+<!-- ================= KABUPATEN ================= -->
+<section class="kabupaten">
+  <h2 class="kabupaten__title">Kab. Tapanuli Tengah</h2>
+
+  <div class="kabupaten__content">
+    <!-- KIRI : PETA -->
+      <div class="kabupaten__map">
+        <div id="homeMap"></div>
+      </div>
+
+    <!-- KANAN : DESKRIPSI -->
+    <div class="kabupaten__desc">
+      <h3>Deskripsi Wilayah</h3>
+      <p>
+        Kabupaten Tapanuli Tengah merupakan salah satu wilayah di
+        Provinsi Sumatera Utara yang memiliki potensi bencana alam
+        seperti banjir, longsor, dan gempa bumi.
+      </p>
+      <p>
+        Informasi ini disajikan untuk mendukung pemetaan risiko bencana
+        serta perencanaan mitigasi yang lebih baik.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ================= BENCANA SUMATERA ================= -->
+<section class="bencanaFull">
+  <div class="bencanaFull__inner">
+    <h2 class="bencanaFull__title">
+      Bencana Sumatera – November 2025
+    </h2>
+
+    <div class="bencanaFull__gallery">
+      <img src="assets/bencana1.jpg" alt="Bencana 1">
+      <img src="assets/bencana2.jpg" alt="Bencana 2">
+      <img src="assets/bencana3.jpg" alt="Bencana 3">
+      <img src="assets/bencana4.jpg" alt="Bencana 4">
+    </div>
+
+    <div class="bencanaFull__desc">
+      <p>
+        Pada bulan November 2025, wilayah Sumatera mengalami rangkaian
+        bencana alam yang signifikan, meliputi banjir bandang, longsor,
+        serta kerusakan infrastruktur di beberapa daerah pesisir dan
+        perbukitan.
+      </p>
+      <p>
+        Curah hujan ekstrem yang berlangsung dalam durasi panjang serta
+        kondisi geografis wilayah memperparah dampak bencana. Hal ini
+        menegaskan pentingnya perencanaan mitigasi, kesiapsiagaan
+        masyarakat, serta penanganan terpadu untuk mengurangi risiko
+        bencana di masa mendatang.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <span class="muted">© 2026 RYL Team</span>
+    </footer>
+  </main>
+
+<!-- LEAFLET JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- SCRIPT UTAMA -->
+<script src="script.js"></script>
+</body>
+</html>

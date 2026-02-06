@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Informasi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="detail">
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand__logo" src="assets/logo.png" alt="Logo JejakTapteng">
+      <div class="brand__text">
+        <div class="brand__title">JejakTapteng</div>
+        <div class="brand__sub">Beranda • Peta • Detail Informasi • Tentang</div>
+      </div>
+    </div>
+
+    <nav class="nav" id="mainNav">
+      <a class="nav__link" href="index.html" data-page="beranda">Beranda</a>
+      <a class="nav__link" href="peta.html" data-page="peta">Peta</a>
+      <a class="nav__link" href="detail-informasi.html" data-page="detail">Detail Informasi</a>
+      <a class="nav__link" href="tentang.html" data-page="tentang">Tentang</a>
+    </nav>
+  </header>
+
+  <!-- JUDUL HALAMAN (CUMA SEKALI) -->
+  <div class="pageHead container">
+    <h1>Detail Informasi</h1>
+    <p class="muted">Tempat halaman detail informasi.</p>
+  </div>
+
+<!-- ===== BLOK 1 ===== -->
+<section class="fullBlock" data-periode="2020-2022__2023-2024">
+
+  <div class="yearText">2020–2022 → 2023–2024</div>
+
+  <div class="container">
+
+    <!-- PETA FOTO -->
+    <div class="gridMapTop">
+      <div class="card">
+        <div class="card__title">Tutupan Lahan 2020–2022</div>
+        <img src="assets/Peta_Tutupan_Lahan_2020-2022.png" class="mapImage">
+      </div>
+
+      <div class="card">
+        <div class="card__title">Tutupan Lahan 2023–2024</div>
+        <img src="assets/Peta_Tutupan_Lahan_2023-2024.png" class="mapImage">
+      </div>
+    </div>
+
+    <!-- CHART + ANALISIS -->
+    <div class="gridTop">
+
+      <div class="card">
+        <div class="card__title">Perubahan Luas Lahan (Ha)</div>
+        <canvas id="chart-2020-2022__2023-2024" height="180"></canvas>
+
+        <div class="divider"></div>
+
+        <div class="tableWrap">
+          <table class="table" id="table-2020-2022__2023-2024">
+            <thead>
+              <tr>
+                <th>Kelas</th>
+                <th>2020–2022 (ha)</th>
+                <th>2023–2024 (ha)</th>
+                <th>Δ (ha)</th>
+                <th>Tren</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__title">Analisis Transmisi – Key Insights</div>
+        <ul class="list">
+          <li><b>Transisi dominan menuju Vegetasi</b> berasal dari Sawit → Vegetasi (≈6,50%), diikuti Pertanian → Vegetasi (≈4,25%) dan Infrastruktur → Vegetasi (≈3,75%).</li>
+          <li><b>Transisi menuju Sawit</b> didominasi Infrastruktur → Sawit (≈4,24%) dan Lahan Terbuka → Sawit (≈4,10%).</li>
+          <li>Secara bersih, <b>luas Sawit menurun</b> karena alih fungsi Sawit → Vegetasi (≈6,50%) lebih besar dibanding suplai masuk.</li>
+        </ul>
+      </div>
+
+    </div>
+      
+      <div class="card" style="margin-top:24px">
+    <div class="card__title">Analisis</div>
+
+    <div style="line-height:1.7; color:#e5e7eb">
+      <p>
+      Pada periode 2020–2022 ke 2023–2024, tutupan lahan Kabupaten Tapanuli Tengah
+      menunjukkan perubahan yang relatif moderat dengan kecenderungan utama berupa
+      peningkatan kelas Vegetasi dan penurunan Sawit. Vegetasi meningkat dari 73,746%
+      menjadi 76,118% (+2,372%) dan menjadi perubahan bersih terbesar, terutama
+      disuplai oleh konversi Sawit, Pertanian, dan Infrastruktur ke Vegetasi, yang
+      mengindikasikan proses regenerasi atau penutupan kembali lahan.
+      </p>
+
+      <p>
+      Sebaliknya, Sawit menurun dari 17,275% menjadi 15,558% (−1,716%) akibat konversi
+      ke Vegetasi yang lebih dominan dibandingkan aliran masuknya. Kelas lain seperti
+      Badan Air, Pertanian, dan Lahan Terbuka mengalami perubahan kecil, sementara
+      Infrastruktur menurun cukup signifikan. Secara umum, periode ini ditandai oleh
+      penguatan tutupan vegetasi dan stabilitas relatif kelas lainnya.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOK 2 ===== -->
+<section class="fullBlock" data-periode="2020-2022__2025">
+
+  <div class="yearText">2020–2022 → 2025</div>
+
+  <div class="container">
+
+    <!-- PETA FOTO -->
+    <div class="gridMapTop">
+      <div class="card">
+        <div class="card__title">Tutupan Lahan 2020–2022</div>
+        <img src="assets/Peta_Tutupan_Lahan_2020-2022.png" class="mapImage">
+      </div>
+
+      <div class="card">
+        <div class="card__title">Tutupan Lahan 2025</div>
+        <img src="assets/Peta_Tutupan_Lahan_2025.png" class="mapImage">
+      </div>
+    </div>
+
+    <!-- CHART + ANALISIS -->
+    <div class="gridTop">
+
+      <div class="card">
+        <div class="card__title">Perubahan Luas Lahan (Ha)</div>
+        <canvas id="chart-2020-2022__2025" height="180"></canvas>
+
+        <div class="divider"></div>
+
+        <div class="tableWrap">
+          <table class="table" id="table-2020-2022__2025">
+            <thead>
+              <tr>
+                <th>Kelas</th>
+                <th>2020–2022 (ha)</th>
+                <th>2025 (ha)</th>
+                <th>Δ (ha)</th>
+                <th>Tren</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__title">Analisis Transmisi – Key Insights</div>
+        <ul class="list">
+          <li><b>Kenaikan Sawit paling dominan</b> disuplai oleh Infrastruktur → Sawit (≈6,51%), Vegetasi → Sawit (≈2,37%), dan Lahan Terbuka → Sawit (≈1,25%).</li>
+          <li>Konversi dari Infrastruktur menjadi faktor utama ekspansi Sawit jangka panjang.</li>
+          <li>Secara bersih, <b>Sawit mengalami pertumbuhan tertinggi</b> di antara seluruh kelas (+24,69%).</li>
+        </ul>
+      </div>
+
+    </div>
+      
+      <div class="card" style="margin-top:24px">
+    <div class="card__title">Analisis</div>
+
+    <div style="line-height:1.7; color:#e5e7eb">
+      <p>
+      Selama periode 2020–2022 ke 2025, tutupan lahan mengalami perubahan yang sangat
+      signifikan dengan ekspansi Sawit sebagai dinamika utama. Sawit meningkat tajam
+      dari 17,275% menjadi 41,963% (+24,687%) dan menjadi kelas dengan pertumbuhan
+      terbesar, terutama berasal dari konversi Infrastruktur, Vegetasi, dan Lahan
+      Terbuka.
+      </p>
+
+      <p>
+      Vegetasi tetap mendominasi lanskap dengan proporsi 53,726%, meskipun mengalami
+      tekanan konversi di beberapa area. Di sisi lain, Lahan Terbuka, Infrastruktur,
+      dan Pertanian mengalami penurunan luasan, sementara Badan Air meningkat sedikit.
+      Secara keseluruhan, periode ini menunjukkan intensifikasi penggunaan lahan untuk
+      perkebunan sawit yang sangat kuat, sehingga diperlukan kehati-hatian dalam
+      interpretasi dan dukungan uji akurasi klasifikasi.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOK 3 ===== -->
+<section class="fullBlock" data-periode="2023-2024__2025">
+
+  <div class="yearText">2023–2024 → 2025</div>
+
+  <div class="container">
+
+    <!-- PETA FOTO -->
+    <div class="gridMapTop">
+      <div class="card">
+        <div class="card__title">Tutupan Lahan 2023–2024</div>
+        <img src="assets/Peta_Tutupan_Lahan_2023-2024.png" class="mapImage">
+      </div>
+
+      <div class="card">
+        <div class="card__title">Tutupan Lahan 2025</div>
+        <img src="assets/Peta_Tutupan_Lahan_2025.png" class="mapImage">
+      </div>
+    </div>
+
+    <!-- CHART + ANALISIS -->
+    <div class="gridTop">
+
+      <div class="card">
+        <div class="card__title">Perubahan Luas Lahan (Ha)</div>
+        <canvas id="chart-2023-2024__2025" height="180"></canvas>
+
+        <div class="divider"></div>
+
+        <div class="tableWrap">
+          <table class="table" id="table-2023-2024__2025">
+            <thead>
+              <tr>
+                <th>Kelas</th>
+                <th>2023–2024 (ha)</th>
+                <th>2025 (ha)</th>
+                <th>Δ (ha)</th>
+                <th>Tren</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__title">Analisis Transmisi – Key Insights</div>
+        <ul class="list">
+          <li><b>Transisi terbesar menuju Sawit</b> berasal dari Badan Air → Sawit (≈5,46%), Vegetasi → Sawit (≈2,10%), dan Lahan Terbuka → Sawit (≈1,49%).</li>
+          <li>Konversi dari badan air menunjukkan tekanan signifikan terhadap sistem hidrologi.</li>
+          <li>Secara bersih, <b>Sawit menjadi kelas dengan peningkatan terbesar</b> (+26,40%).</li>
+        </ul>
+      </div>
+
+    </div>
+      
+      <div class="card" style="margin-top:24px">
+    <div class="card__title">Analisis</div>
+
+    <div style="line-height:1.7; color:#e5e7eb">
+      <p>
+      Pada periode 2023–2024 ke 2025, struktur tutupan lahan mengalami pergeseran yang
+      sangat kuat menuju dominasi Sawit. Sawit meningkat drastis dari 15,558% menjadi
+      41,963% (+26,404%), sementara Vegetasi menurun tajam dari 76,118% menjadi 53,726%
+      (−22,391%), yang mengindikasikan konversi vegetasi dalam skala besar.
+      </p>
+
+      <p>
+      Peningkatan Sawit terutama disuplai oleh konversi dari Badan Air, Vegetasi, dan
+      Lahan Terbuka, yang menunjukkan bahwa area perairan tidak permanen dan lahan
+      transisi turut dimanfaatkan untuk perkebunan. Kelas lain seperti Infrastruktur,
+      Pertanian, dan Lahan Terbuka cenderung menurun, sehingga periode ini menegaskan
+      ekspansi sawit sebagai penggerak utama perubahan tutupan lahan.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOK 4 ===== -->
+<section class="fullBlock" data-periode="2020-2022__bencana">
+
+  <div class="yearText">2020–2022 → Saat_Bencana</div>
+
+  <div class="container">
+
+    <!-- PETA FOTO -->
+    <div class="gridMapTop">
+      <div class="card">
+        <div class="card__title">Tutupan Lahan 2020–2022</div>
+        <img src="assets/Peta_Tutupan_Lahan_2020-2022.png" class="mapImage">
+      </div>
+
+      <div class="card">
+        <div class="card__title">Tutupan Lahan Saat_Bencana</div>
+        <img src="assets/Peta_Tutupan_Lahan_Saat_Bencana.png" class="mapImage">
+      </div>
+    </div>
+
+    <!-- CHART + ANALISIS -->
+    <div class="gridTop">
+
+      <div class="card">
+        <div class="card__title">Perubahan Luas Lahan (Ha)</div>
+        <canvas id="chart-2020-2022__bencana" height="180"></canvas>
+
+        <div class="divider"></div>
+
+        <div class="tableWrap">
+          <table class="table" id="table-2020-2022__bencana">
+            <thead>
+              <tr>
+                <th>Kelas</th>
+                <th>2020–2022 (ha)</th>
+                <th>Saat_Bencana (ha)</th>
+                <th>Δ (ha)</th>
+                <th>Tren</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__title">Analisis Transmisi – Key Insights</div>
+        <ul class="list">
+          <li><b>Kenaikan Sawit selama bencana</b> terutama disuplai oleh Pertanian → Sawit (≈7,78%), diikuti Badan Air → Sawit (≈4,08%).</li>
+          <li>Alih fungsi lahan pertanian menunjukkan respons adaptif terhadap tekanan bencana.</li>
+          <li>Secara bersih, <b>Sawit tetap menunjukkan tren naik tertinggi</b> (+6,94%) dibanding kelas lainnya.</li>
+        </ul>
+      </div>
+
+    </div>
+
+      <div class="card" style="margin-top:24px">
+    <div class="card__title">Analisis</div>
+
+    <div style="line-height:1.7; color:#e5e7eb">
+      <p>
+      Pada periode 2020–2022 hingga saat bencana, tutupan lahan Kabupaten Tapanuli
+      Tengah menunjukkan penurunan signifikan pada Vegetasi dan peningkatan pada Sawit
+      serta Badan Air. Vegetasi berkurang dari 73,746% menjadi 66,323% (−7,423%),
+      sementara Sawit meningkat dari 17,275% menjadi 24,210% (+6,935%), terutama akibat
+      konversi dari Pertanian, Badan Air, dan Infrastruktur.
+      </p>
+
+      <p>
+      Peningkatan Badan Air yang cukup besar mencerminkan meluasnya genangan atau
+      perubahan kondisi perairan akibat bencana. Penurunan pada Infrastruktur dan
+      Lahan Terbuka menunjukkan terjadinya pergeseran fungsi lahan, sehingga periode
+      ini merefleksikan tekanan bencana terhadap tutupan alami dan perubahan
+      penggunaan lahan yang cukup intensif.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOK 5 ===== -->
+<section class="fullBlock" data-periode="2023-2024__bencana">
+
+  <div class="yearText">2023–2024 → Saat_Bencana</div>
+
+  <div class="container">
+
+    <!-- PETA FOTO -->
+    <div class="gridMapTop">
+      <div class="card">
+        <div class="card__title">Tutupan Lahan 2023–2024</div>
+        <img src="assets/Peta_Tutupan_Lahan_2023-2024.png" class="mapImage">
+      </div>
+
+      <div class="card">
+        <div class="card__title">Tutupan Lahan Saat_Bencana</div>
+        <img src="assets/Peta_Tutupan_Lahan_Saat_Bencana.png" class="mapImage">
+      </div>
+    </div>
+
+   <div class="gridTop">
+
+  <!-- KIRI -->
+  <div class="card">
+    <div class="card__title">Perubahan Luas Lahan (Ha)</div>
+
+    <canvas id="chart-2023-2024__bencana" height="180"></canvas>
+
+    <div class="divider"></div>
+
+    <div class="tableWrap">
+      <table class="table" id="table-2023-2024__bencana">
+        <thead>
+          <tr>
+            <th>Kelas</th>
+            <th>2023–2024 (ha)</th>
+            <th>Saat_Bencana (ha)</th>
+            <th>Δ (ha)</th>
+            <th>Tren</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- KANAN -->
+  <div class="card">
+    <div class="card__title">Analisis Transmisi – Key Insights</div>
+    <ul class="list">
+      <li><b>Transisi dominan menuju Sawit</b> berasal dari Pertanian → Sawit (≈3,02%), Badan Air → Sawit (≈2,34%), dan Infrastruktur → Sawit (≈1,92%).</li>
+      <li>Pola ini menunjukkan pergeseran penggunaan lahan yang cepat akibat kondisi ekstrem.</li>
+      <li>Secara bersih, <b>Sawit tetap menjadi kelas dengan kenaikan terbesar</b> (+8,65%).</li>
+    </ul>
+  </div>
+
+</div> 
+
+<div class="card" style="margin-top:24px">
+  <div class="card__title">Analisis</div>
+
+  <div style="line-height:1.7; color:#e5e7eb">
+    <p>
+      Pada periode 2023–2024 hingga saat bencana, tutupan lahan menunjukkan
+      dinamika yang cukup jelas dengan penurunan Vegetasi dan peningkatan
+      Sawit serta Badan Air. Vegetasi menurun dari 76,118% menjadi 66,323%
+      (−9,795%), sementara Sawit meningkat dari 15,558% menjadi 24,210%
+      (+8,651%), terutama akibat konversi dari Pertanian, Badan Air, dan
+      Infrastruktur.
+    </p>
+
+    <p>
+      Peningkatan Badan Air yang signifikan mengindikasikan adanya genangan
+      dan perubahan hidrologi akibat bencana, sedangkan kelas lain seperti
+      Lahan Terbuka dan Pertanian cenderung menurun. Secara umum, periode ini
+      menunjukkan bahwa kejadian bencana berperan penting dalam mendorong
+      perubahan struktur tutupan lahan, baik secara langsung maupun tidak
+      langsung.
+    </p>
+  </div>
+</div>
+
+    </div>
+
+  </div>
+
+
+  </div>
+</section>
+
+
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
